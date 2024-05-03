@@ -1,0 +1,97 @@
+
+header{
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.content {
+  font-family: "Jomolhari", serif;
+  background-color: #ffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Update this line */
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  box-shadow: -1px 4px 5px 0px rgb(0 0 0 / 40%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+  .content img{
+   width: 50px;
+  }
+  .content p{
+    font-size: 1.3rem;
+  }
+  .logoSection{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  nav {
+    margin-right: 1rem;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: flex-end;
+}
+  nav a{
+    margin-left: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  nav a:hover{
+    background-color: black;
+    color: #ffff;
+    padding: 1rem;
+  }
+
+  .menuContainer img{
+    display: none;
+  }
+  .sidebar{ 
+    margin: auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    height: 100%;
+    width: 20%;
+    background-color: #ffffff;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: -1px 4px 5px 0px rgb(0 0 0 / 29%), 0 6px 20px 0 rgb(0 0 0 / 54%);
+    transition: right 0.3s ease; 
+  }
+  .sidebar.active {
+    right: 0; 
+  }
+  
+  
+  .sidebar a{
+    margin: 1rem 0 0 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: -webkit-fill-available;
+    text-align: center;
+  }
+
+  
+  @media (max-width: 962px) {
+  nav{
+    display: none;
+  }
+  .menuContainer img{
+    display: block;
+    margin-right: 1rem;
+  }
+  .sidebar.active {
+    right: 0;
+    width: 70%; 
+  }
+  }
+  
