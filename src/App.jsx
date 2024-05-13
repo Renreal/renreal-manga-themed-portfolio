@@ -18,6 +18,7 @@ function App() {
 
       <Header scrollToRef={scrollToRef} aboutRef={aboutRef} contactRef={contactRef} skillsRef ={skillsRef} projectsRef = {projectsRef}/>
       <Sections aboutRef={aboutRef} contactRef={contactRef} skillsRef ={skillsRef} projectsRef = {projectsRef}/>
+     
     </div>
      
   );

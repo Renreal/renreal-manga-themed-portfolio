@@ -6,9 +6,9 @@ section{
     align-items: center;
     justify-content: center;
 }
-.about-section{
+.about-section {
     display: flex;
-    margin: 6rem auto 3rem auto;
+    /* width: 100%; */
     border: 1px solid;
     justify-content: center;
     padding: 4rem;
@@ -26,10 +26,9 @@ section{
     filter: grayscale(100%);
 }
 
-.aboutTextOuterContainer{
+.aboutTextOuterContainer {
     background-color: #fff;
     border: 7px solid;
-    width: 45vw;
     background-image: url(/src/assets/bg2.jpg);
     margin: auto 1rem auto;
 }
@@ -40,4 +39,79 @@ section{
     text-align: center;
     background-color: #fff;
     padding: 3rem;
+}
+.aboutInnerContainer a{
+    color: black;
+}
+.aboutInnerContainer a:hover{
+    color:rgba(0, 0, 0, 0.784);
+}
+
+.skills-section {
+    margin: 1rem auto;
+    display: flex;
+    border: 1px solid;
+    justify-content: center;
+    padding: 0.5rem;
+    background-image: url(/src/assets/bg-colored.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    align-items: center;
+    flex-direction: column;
+}
+.skillsNav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.skillsNav div{
+    margin: 0 1rem;
+    border: solid;
+    padding: 1rem;
+    background: white;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    width: max-content;
+    text-transform: uppercase;
+}
+.skillsNav div:hover , div.selected{
+    background: #000000;
+    color: #F5C524;
+}
+.skillsContainer{
+   
+    background-color: #fff;
+    border: 4px solid black;
+    text-align: center;
+    margin: 2.5rem;
+}
+.skillsContainer img{
+    width: 5rem;
+    margin: 0.5rem;
+    padding: 1px;
+}
+    
+
+@media (max-width: 962px){
+    .about-section{
+        flex-direction: column;
+      }
+      .aboutInnerContainer {
+        margin: 1rem;
+        font-size: 20px;
+        padding: 1rem;
+    }
+}
+@media (max-width: 570px){
+    .about-section img {
+        width: 50vw;
+    }
+}
+@media (max-width: 500px){
+    .about-section{
+       padding: 1rem;
+    }
 }

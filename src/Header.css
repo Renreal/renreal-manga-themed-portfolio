@@ -3,6 +3,7 @@ header{
   display: flex;
   justify-content: center;
   z-index: 10;
+  margin-bottom: 6rem;
 }
 
 .content {
@@ -37,15 +38,16 @@ header{
     justify-content: flex-end;
 }
   nav a{
+    border: solid white;
     margin-left: 2rem;
     cursor: pointer;
     font-size: 1.5rem;
     padding: 1rem;
   }
   nav a:hover{
-    background-color: black;
-    color: #ffff;
-    padding: 1rem;
+    border: solid;
+    background-color: #000;
+    color:#F5C524;
   }
 
   .menuContainer img{
@@ -72,6 +74,7 @@ header{
   
   
   .sidebar a{
+    font-family: "Jomolhari", serif;
     margin: 1rem 0 0 0;
     cursor: pointer;
     font-size: 1.5rem;
@@ -79,7 +82,7 @@ header{
     width: -webkit-fill-available;
     text-align: center;
   }
-
+  
   
   @media (max-width: 962px) {
   nav{
