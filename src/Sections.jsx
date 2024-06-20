@@ -14,6 +14,9 @@ import githubIcon from './assets/icons/github.svg';
 import chartJsIcon from './assets/icons/chartjs.svg';
 import jsIcon from './assets/icons/javascipt.svg';
 import vsCodeIcon from './assets/icons/vs-code.svg';
+import cert1 from './assets/certificates/udemy certificate.jpg';
+import cert2 from './assets/certificates/emberspec.jpg';
+import cert3 from './assets/certificates/innovate solutions fest.png';
 
 function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +42,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         <div className="aboutTextOuterContainer">
           <div className="aboutInnerContainer">
             <p>I’m renreal, a 4th year computer engineering student and an aspiring software developer from Cagayan de Oro </p> 
-            <span><a href="https://docs.google.com/document/d/1Y5hcJegGeTqoHsYL8zIERJ4PnwMaFfDC1Dg9mwgIgH4/edit?usp=sharing">Click to View resume</a></span>
+            <span><a href="https://drive.google.com/file/d/1xlwhMw3Z4lmEygkuvE7mqAO6erxnTc3x/view?usp=sharing">Click to View resume</a></span>
           </div>
         </div>
       </section>
@@ -60,6 +63,9 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         {displaySkills ? (
           <div className='skillsContainer'>
             <div className="skillsIcon">
+              <div className="description">
+              I am capable of using these technologies
+              </div>
                 <img src={reactIcon} alt="" />
                 <img src={HtmlIcon} alt="" />
                 <img src={cssIcon} alt="css" />
@@ -76,7 +82,19 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
           </div>
         ) : (
           <div className="certificatesContainer">
-            certificates
+           <div className="certBox">
+           <img src={cert1} alt="" /> <div className="cert-description"><span>Full Stack</span>
+           <p> A Udemy full stack crash course from Proper dot institute</p> </div>
+           </div>
+           <div className="certBox">
+           <img src={cert2} alt="" /> <div className="cert-description"><span>Full Stack</span>
+           <p> A Udemy full stack crash course from Proper dot institute</p> </div>
+           </div>
+           <div className="certBox">
+           <img src={cert3} alt="" /> <div className="cert-description"><span>Full Stack</span>
+           <p> A Udemy full stack crash course from Proper dot institute</p> </div>
+           </div>
+          
           </div>
         )}
       </section>
