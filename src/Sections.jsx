@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Sections.css';
+import './css/Sections.css';
 import profile from './assets/me.png';
 import profile2 from './assets/after.jpg';
 import vercelIcon from './assets/icons/vercel.svg';
@@ -20,9 +20,7 @@ import cert3 from './assets/certificates/innovate solutions fest.png';
 
 function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [selectedNav, setSelectedNav] = useState('viewTools'); // State to track selected nav item
-  
-  /* skills visibility */
+  const [selectedNav, setSelectedNav] = useState('viewTools'); 
   const [displaySkills, setDisplaySkills] = useState(true);
   
   const toggleDisplay = (selectedTab) => {
@@ -34,9 +32,10 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
 
   return (
     <div className='wrapper'>
-      {/* About */}
       <section ref={aboutRef} className="about-section">
-        <div className="imageContainer"onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <div className="imageContainer"
+        // onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
+        >
           <img src={isHovered ? profile2 : profile} alt="anime pic" /> 
         </div>
         <div className="aboutTextOuterContainer">
@@ -46,9 +45,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
           </div>
         </div>
       </section>
-      {/* About (end) */}   
-     
-      {/* Skills */}
+
       <section ref={skillsRef} className="skills-section">
         <div className='skillsNav'>
           <div onClick={() => toggleDisplay('viewTools')} id='viewTools' className={selectedNav === 'viewTools' ? 'selected' : ''}>
@@ -59,7 +56,8 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
           </div>
         </div>
         
-        {/* Conditional rendering based on displaySkills state */}
+{/* Conditional rendering based on displaySkills state */}
+
         {displaySkills ? (
           <div className='skillsContainer'>
             <div className="skillsIcon">
