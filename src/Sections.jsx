@@ -34,14 +34,14 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
     <div className='wrapper'>
       <section ref={aboutRef} className="about-section">
         <div className="imageContainer"
-        // onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
+       // onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
         >
           <img src={isHovered ? profile2 : profile} alt="anime pic" /> 
         </div>
         <div className="aboutTextOuterContainer">
           <div className="aboutInnerContainer">
-            <p>I’m renreal, a 4th year computer engineering student and an aspiring software developer from Cagayan de Oro </p> 
-            <span><a href="https://drive.google.com/file/d/1xlwhMw3Z4lmEygkuvE7mqAO6erxnTc3x/view?usp=sharing">Click to View resume</a></span>
+            <p>I’m renreal, a computer engineer by degree and currently a DevOps Engineer by profession. I'm a weeb that creates softwares during my free time. </p> 
+            <span><a href="https://drive.google.com/file/d/173d2aoNgOV-3oUWxPWNr3jbnqoo7ZbiU/view?usp=sharing">Click to View resume</a></span>
           </div>
         </div>
       </section>

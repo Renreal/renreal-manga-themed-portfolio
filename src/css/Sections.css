@@ -111,7 +111,7 @@ section{
     border-radius: 1rem;
     filter: grayscale(1);
 }
-.certificatesContainer img:hover{
+/* .certificatesContainer img:hover{
     transform: scale(1.5);
 }
 
@@ -119,8 +119,8 @@ section{
     filter: none;
    position: absolute;
    z-index: 20;
+} */
 
-}
 .certBox{
   
     margin-top: 1rem;
