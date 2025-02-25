@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
-import Sections from './Sections.jsx'; 
 import Header from './Header.jsx';
+import Sections from './Sections.jsx'; 
+
+
 function App() {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
@@ -18,7 +20,6 @@ function App() {
 
       <Header scrollToRef={scrollToRef} aboutRef={aboutRef} contactRef={contactRef} skillsRef ={skillsRef} projectsRef = {projectsRef}/>
       <Sections aboutRef={aboutRef} contactRef={contactRef} skillsRef ={skillsRef} projectsRef = {projectsRef}/>
-     
     </div>
      
   );

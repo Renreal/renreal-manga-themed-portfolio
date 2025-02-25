@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Test from './Test.jsx';
 import './css/Sections.css';
 import profile from './assets/me.png';
 import profile2 from './assets/after.jpg';
@@ -14,9 +15,6 @@ import githubIcon from './assets/icons/github.svg';
 import chartJsIcon from './assets/icons/chartjs.svg';
 import jsIcon from './assets/icons/javascipt.svg';
 import vsCodeIcon from './assets/icons/vs-code.svg';
-import cert1 from './assets/certificates/udemy certificate.jpg';
-import cert2 from './assets/certificates/emberspec.jpg';
-import cert3 from './assets/certificates/innovate solutions fest.png';
 
 function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -48,23 +46,19 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
 
       <section ref={skillsRef} className="skills-section">
         <div className='skillsNav'>
-          <div onClick={() => toggleDisplay('viewTools')} id='viewTools' className={selectedNav === 'viewTools' ? 'selected' : ''}>
-            tools and technologies
-          </div>
-          <div onClick={() => toggleDisplay('viewCertificate')} id='viewCertificate' className={selectedNav === 'viewCertificate' ? 'selected' : ''}>
-            certificates
-          </div>
+        <div className="description">
+             Skills and Credentials
+              </div>
         </div>
-        
-{/* Conditional rendering based on displaySkills state */}
+        <Test/>    
 
-        {displaySkills ? (
           <div className='skillsContainer'>
             <div className="skillsIcon">
-              <div className="description">
-              I am capable of using these technologies
-              </div>
+              <div className='titleContainer'>
                 <img src={reactIcon} alt="" />
+                React
+                </div>
+                
                 <img src={HtmlIcon} alt="" />
                 <img src={cssIcon} alt="css" />
                 <img src={bootstrapIcon} alt="bootsrap" />
@@ -78,24 +72,9 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
                 <img src={chartJsIcon} alt="" />
                </div>  
           </div>
-        ) : (
-          <div className="certificatesContainer">
-           <div className="certBox">
-           <img src={cert1} alt="" /> <div className="cert-description"><span>Full Stack</span>
-           <p> A Udemy full stack crash course from Proper dot institute</p> </div>
-           </div>
-           <div className="certBox">
-           <img src={cert2} alt="" /> <div className="cert-description"><span>Full Stack</span>
-           <p> A Udemy full stack crash course from Proper dot institute</p> </div>
-           </div>
-           <div className="certBox">
-           <img src={cert3} alt="" /> <div className="cert-description"><span>Full Stack</span>
-           <p> A Udemy full stack crash course from Proper dot institute</p> </div>
-           </div>
-          
-          </div>
-        )}
       </section>
+      
+      
 
       <section ref={projectsRef} className="projects-section">
         <h2>Projects</h2>
