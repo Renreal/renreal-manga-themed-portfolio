@@ -7,16 +7,19 @@
   flex-direction: column;
   margin: 0 auto;
 }
-body{
+body {
   margin: 0 auto;
+  overflow-x: hidden;
+}
+.container {
+  margin: 0 86px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  width: 100%;
 }
 
-.container {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+@media(max-width:756px){
+  .container{
+    margin: 0 auto;
+  }
 }
+  

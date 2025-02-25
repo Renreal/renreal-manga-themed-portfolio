@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
-import Sections from './Sections.jsx'; 
 import Header from './Header.jsx';
+import Sections from './Sections.jsx'; 
+
+
 function App() {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
