@@ -110,9 +110,18 @@ section{
     width: 80vw;
 }
 .certificatesContainer img{
-    width: 50vw;
-    height: 35vh;
+    width: 100%;
+    max-width: 50vw;
+    height: auto;
    object-fit: contain;
+}
+.certificatesContainer p{
+    text-align: center;
+}
+@media (min-width: 1025px) {
+    .certificatesContainer img {
+        max-width: 23vw; /* Shrinks on wider screens */
+    }
 }
 
 .certBox{
