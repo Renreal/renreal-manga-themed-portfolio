@@ -59,7 +59,7 @@ const Test = () => {
           ))}
         </Carousel>
       ) : (
-        <p>Loading images...</p>
+        <p>Fetching certificates. Please wait...</p>
       )}
     </div>
   );
