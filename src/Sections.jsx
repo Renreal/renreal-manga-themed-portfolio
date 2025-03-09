@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion"; // 👈 Import useInView
-import Test from './Test.jsx';
+import Certificates from './certificates.jsx';
 import './css/Sections.css';
 import profile from './assets/me.png';
 import profile2 from './assets/after.jpg';
 import reactIcon from './assets/icons/rjs.svg';
+import Skills from './Skills.jsx';
 
 function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -62,20 +63,23 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         <div className='skillsNav'>
           <div className="description">Skills and Credentials</div>
         </div>
-        <Test/>    
+        <Certificates/>    
 
-        <div className='skillsContainer'>
+        {/* <div className='skillsContainer'>
           <div className="skillsIcon">
             <div className='titleContainer'>
-              <img src={reactIcon} alt="" />
-              React
+              <img src='https://www.mabl.com/hubfs/CICDBlog.png' alt="" />
+             <p>React</p>
             </div> 
             <div className='titleContainer'>
               <img src={reactIcon} alt="" />
-              React
+             <p>React</p>
             </div>
           </div>  
-        </div>
+        </div> */}
+        <Skills/>
+
+
       </motion.section>
 
       {/* Projects Section */}
