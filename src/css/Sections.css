@@ -1,5 +1,5 @@
 .wrapper{
-    margin: 0 auto;
+    margin: 0 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,12 +57,13 @@ section{
     border: 1px solid;
     justify-content: center;
     padding: 0.5rem;
-   /*  background-image: url(/src/assets/line-bg.jpg); */
-    background-size: cover;
+    background-image: url(/src/assets/dot.jpg);
+    background-size: contain;
     background-position: center;
     background-color: #fff;
     align-items: center;
     flex-direction: column;
+    width: -webkit-fill-available;
 }
 .skillsNav{
     display: flex;
@@ -88,7 +89,7 @@ section{
    background-color: rgb(95, 90, 90);
 }
 .skillsContainer{
-   
+   width: 75%;
     background-color: #fff;
     border: 4px solid black;
     text-align: center;
@@ -119,7 +120,7 @@ section{
 }
 @media (min-width: 1025px) {
     .certificatesContainer img {
-        max-width: 23vw; /* Shrinks on wider screens */
+        max-width: 25vw; /* Shrinks on wider screens */
     }
 }
 

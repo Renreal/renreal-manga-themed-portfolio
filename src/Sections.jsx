@@ -60,27 +60,12 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         animate={skillsInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
-        <div className='skillsNav'>
-          <div className="description">Skills and Credentials</div>
-        </div>
+        
         <Certificates/>    
-
-        {/* <div className='skillsContainer'>
-          <div className="skillsIcon">
-            <div className='titleContainer'>
-              <img src='https://www.mabl.com/hubfs/CICDBlog.png' alt="" />
-             <p>React</p>
-            </div> 
-            <div className='titleContainer'>
-              <img src={reactIcon} alt="" />
-             <p>React</p>
-            </div>
-          </div>  
-        </div> */}
-        <Skills/>
-
-
+      
       </motion.section>
+
+      <Skills/>
 
       {/* Projects Section */}
       <motion.section

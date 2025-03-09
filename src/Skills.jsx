@@ -29,6 +29,10 @@ const fetchSkillsIcon = () => {
 
   return (
     <div className="skillsContainer">
+   <span>I am capable of the following
+   <img src="https://media1.tenor.com/m/Y_uuSuXUX8sAAAAd/ami-fat-cat-fgcat.gif" alt="" />
+   <img src="https://media.tenor.com/945lNrIkL20AAAAj/kawai-budding-pop.gif" alt="" />  
+    </span>   
       <div className="skillsIcon">
         {skills.length > 0 ? (
           skills.map((skill) => (
