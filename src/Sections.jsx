@@ -61,23 +61,17 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
 
           <div className='skillsContainer'>
             <div className="skillsIcon">
-              <div className='titleContainer'>
-                <img src={reactIcon} alt="" />
-                React
+                <div className='titleContainer'>
+                  <img src={reactIcon} alt="" />
+                  React
+                </div> 
+                
+                <div className='titleContainer'>
+                  <img src={reactIcon} alt="" />
+                  React
                 </div>
                 
-                <img src={HtmlIcon} alt="" />
-                <img src={cssIcon} alt="css" />
-                <img src={bootstrapIcon} alt="bootsrap" />
-                <img src={jsIcon} alt="" />
-                <img src={databaseIcon} alt="" />
-                <img src={fbaseIcon} alt="" />
-                <img src={vercelIcon} alt="" />
-                <img src={githubIcon} alt="" />
-                <img src={GitIcon} alt="" />
-                <img src={vsCodeIcon} alt="" />
-                <img src={chartJsIcon} alt="" />
-               </div>  
+            </div>  
           </div>
       </section>
       

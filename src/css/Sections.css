@@ -137,6 +137,18 @@ section{
 }
 
 
+.titleContainer{
+    display: inline-grid;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 1050px){
     .about-section{
         flex-direction: column;
