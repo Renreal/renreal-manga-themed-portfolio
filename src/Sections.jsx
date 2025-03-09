@@ -38,8 +38,15 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         </div>
         <div className="aboutTextOuterContainer">
           <div className="aboutInnerContainer">
-            <p>Hi! I'm Renreal, a developer with experience in DevOps engineering and a degree in computer engineering. I'm currently diving into front-end development and enjoy building and automating software solutions. Let's connect! </p> 
-            <span><a href="https://drive.google.com/file/d/1sEzEaNkfStwMpowocFUeQKZe7_6GvklF/view?usp=sharing">Click to View resume</a></span>
+          <p>Hi! I'm Renreal, a developer with experience in DevOps engineering and a degree in computer engineering. I'm currently diving into front-end development and enjoy building and automating software solutions. Let's connect!</p> 
+            <span>
+              <a href="https://drive.google.com/file/d/1wA3MZJ4RZvRCmPvTvrDHMYfyrNPq138A/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                Click to View Resume
+              </a>
+            </span>
+
           </div>
         </div>
       </section>
