@@ -1,18 +1,12 @@
-
 header{
-  display: flex;
-  justify-content: center;
   z-index: 10;
-  margin-bottom: 6rem;
+  position: fixed;
+  width: 100%;
 }
 
 .content {
   font-family: "Jomolhari", serif;
   background-color: #ffff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /* Update this line */
   display: flex;
   align-items: center;
   font-size: 1rem;

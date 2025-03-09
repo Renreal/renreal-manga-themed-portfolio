@@ -17,11 +17,10 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const contactInView = useInView(contactRef, { threshold: 0.2 });
 
   return (
-    <div className='wrapper'>
+    <div className='wrapper'  ref={aboutRef}>
 
       {/* About Section */}
       <motion.section
-        ref={aboutRef}
         className="about-section"
         initial={{ opacity: 0, x: -50 }}
         animate={aboutInView ? { opacity: 1, x: 0 } : {}}
