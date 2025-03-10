@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "./connection/supabaseClient.jsx";
+import Spline from '@splinetool/react-spline';
 
 const fetchSkillsIcon = () => {
   const [skills, setSkills] = useState([]);
@@ -29,10 +30,18 @@ const fetchSkillsIcon = () => {
 
   return (
     <div className="skillsContainer">
-   <span>I am capable of the following
-   <img src="https://media1.tenor.com/m/Y_uuSuXUX8sAAAAd/ami-fat-cat-fgcat.gif" alt="" />
-   <img src="https://media.tenor.com/945lNrIkL20AAAAj/kawai-budding-pop.gif" alt="" />  
-    </span>   
+        <div className="picachu">
+          <span>I am capable of the following
+          </span>   
+
+            <div>  
+            <Spline
+              scene="https://prod.spline.design/ii9EAhDt9J0RuTWl/scene.splinecode" 
+            />
+            </div>
+        </div>
+    
+
       <div className="skillsIcon">
         {skills.length > 0 ? (
           skills.map((skill) => (
