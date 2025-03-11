@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "./connection/supabaseClient.jsx";
-import Spline from '@splinetool/react-spline';
+// import Spline from '@spli/netool/react-spline';
+import My3DComponent from "./My3DComponent";
 
 const fetchSkillsIcon = () => {
   const [skills, setSkills] = useState([]);
@@ -30,17 +31,8 @@ const fetchSkillsIcon = () => {
 
   return (
     <div className="skillsContainer">
-        <div className="picachu">
-          <span>I am capable of the following
-          </span>   
 
-            <div>  
-            <Spline
-              scene="https://prod.spline.design/ii9EAhDt9J0RuTWl/scene.splinecode" 
-            />
-            </div>
-        </div>
-    
+        <My3DComponent />
 
       <div className="skillsIcon">
         {skills.length > 0 ? (
