@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "./connection/supabaseClient.jsx";
-// import Spline from '@spli/netool/react-spline';
-import My3DComponent from "./My3DComponent";
 
 const fetchSkillsIcon = () => {
   const [skills, setSkills] = useState([]);
