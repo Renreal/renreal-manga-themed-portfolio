@@ -11,15 +11,11 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
-.container {
-  margin: 0 86px;
-  display: flex;
-  flex-direction: column;
-}
+
 
 @media(max-width:756px){
-  .container{
+  /* .container{
     margin: 0 auto;
-  }
+  } */
 }
   

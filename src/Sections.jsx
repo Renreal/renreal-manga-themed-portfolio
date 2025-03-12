@@ -1,47 +1,47 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion"; // 👈 Import useInView
-import Test from './Test.jsx';
+import Certificates from './certificates.jsx';
 import './css/Sections.css';
 import profile from './assets/me.png';
 import profile2 from './assets/after.jpg';
 import reactIcon from './assets/icons/rjs.svg';
+import Skills from './Skills.jsx';
 
 function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [selectedNav, setSelectedNav] = useState('viewTools'); 
-  
+  const [selectedNav, setSelectedNav] = useState('viewTools');
+
   const aboutInView = useInView(aboutRef, { threshold: 0.2 });
   const skillsInView = useInView(skillsRef, { threshold: 0.2 });
   const projectsInView = useInView(projectsRef, { threshold: 0.2 });
   const contactInView = useInView(contactRef, { threshold: 0.2 });
 
   return (
-    <div className='wrapper'>
+    <div className='wrapper' ref={aboutRef}>
 
       {/* About Section */}
       <motion.section
-        ref={aboutRef}
         className="about-section"
         initial={{ opacity: 0, x: -50 }}
         animate={aboutInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
         <div className="imageContainer">
-          <img src={isHovered ? profile2 : profile} alt="anime pic" /> 
+          <img src={isHovered ? profile2 : profile} alt="anime pic" />
         </div>
-        
-        
+
+
         <motion.div className="aboutTextOuterContainer"
-        initial={{ opacity: 0, x: 50 }}
-        animate={aboutInView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 1 }}
+          initial={{ opacity: 0, x: 50 }}
+          animate={aboutInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 1 }}
         >
           <div className="aboutInnerContainer">
-            <p>Hi! I'm Renreal, a developer with experience in DevOps engineering and a degree in computer engineering. I'm currently diving into front-end development and enjoy building and automating software solutions. Let's connect!</p> 
+            <p>Hi! I'm Renreal, a developer with experience in DevOps engineering and a degree in computer engineering. I'm currently diving into front-end development and enjoy building and automating software solutions. Let's connect!</p>
             <span>
-              <a href="https://drive.google.com/file/d/1wA3MZJ4RZvRCmPvTvrDHMYfyrNPq138A/view?usp=sharing" 
-                target="_blank" 
+              <a href="https://drive.google.com/file/d/1wA3MZJ4RZvRCmPvTvrDHMYfyrNPq138A/view?usp=sharing"
+                target="_blank"
                 rel="noopener noreferrer">
                 Click to View Resume
               </a>
@@ -60,24 +60,12 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         animate={skillsInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
-        <div className='skillsNav'>
-          <div className="description">Skills and Credentials</div>
-        </div>
-        <Test/>    
 
-        <div className='skillsContainer'>
-          <div className="skillsIcon">
-            <div className='titleContainer'>
-              <img src={reactIcon} alt="" />
-              React
-            </div> 
-            <div className='titleContainer'>
-              <img src={reactIcon} alt="" />
-              React
-            </div>
-          </div>  
-        </div>
+        <Certificates />
+
       </motion.section>
+
+      <Skills />
 
       {/* Projects Section */}
       <motion.section

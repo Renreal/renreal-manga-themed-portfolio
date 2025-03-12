@@ -3,7 +3,7 @@ import { supabase } from "./connection/supabaseClient.jsx";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const Test = () => {
+const Certificates = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -65,4 +65,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Certificates;

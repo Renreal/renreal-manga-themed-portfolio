@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Header from './Header.jsx';
-import Sections from './Sections.jsx'; 
+import Sections from './Sections.jsx';
 
 
 function App() {
@@ -18,10 +18,10 @@ function App() {
   return (
     <div className="container">
 
-      <Header scrollToRef={scrollToRef} aboutRef={aboutRef} contactRef={contactRef} skillsRef ={skillsRef} projectsRef = {projectsRef}/>
-      <Sections aboutRef={aboutRef} contactRef={contactRef} skillsRef ={skillsRef} projectsRef = {projectsRef}/>
+      <Header scrollToRef={scrollToRef} aboutRef={aboutRef} contactRef={contactRef} skillsRef={skillsRef} projectsRef={projectsRef} />
+      <Sections aboutRef={aboutRef} contactRef={contactRef} skillsRef={skillsRef} projectsRef={projectsRef} />
     </div>
-     
+
   );
 }
 
