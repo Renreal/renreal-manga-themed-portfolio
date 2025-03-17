@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "../src/connection/supabaseClient.jsx";
+import { supabase } from "../connection/supabaseClient.jsx";
 
 const CACHE_KEY = "skillsCache";
-const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
 
 const fetchSkillsIcon = () => {
   const [skills, setSkills] = useState([]);

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion"; // 👈 Import useInView
-import Certificates from "../sections/certificates.jsx";
+import Certificates from "./sections/certificates.jsx";
 import "./css/Sections.css";
 import profile from "./assets/me.png";
 import profile2 from "./assets/after.jpg";
-import Skills from "../sections/Skills.jsx";
+import TechStack from "./sections/Techstack.jsx";
 import { IoLogoLinkedin, IoLogoGithub, IoIosMail } from "react-icons/io";
 import { FaGoogleDrive } from "react-icons/fa";
 
@@ -92,7 +92,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         <Certificates />
       </motion.section>
 
-      <Skills />
+      <TechStack />
 
       {/* Projects Section */}
       <motion.section
