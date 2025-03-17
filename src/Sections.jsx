@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion"; // 👈 Import useInView
-import Certificates from "./certificates.jsx";
+import Certificates from "../sections/certificates.jsx";
 import "./css/Sections.css";
 import profile from "./assets/me.png";
 import profile2 from "./assets/after.jpg";
-import Skills from "./Skills.jsx";
+import Skills from "../sections/Skills.jsx";
 import { IoLogoLinkedin, IoLogoGithub, IoIosMail } from "react-icons/io";
 import { FaGoogleDrive } from "react-icons/fa";
 
@@ -46,17 +46,30 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
             </p>
             <span>
               <div className="socials">
-                <i>
+                <a
+                  href="https://www.linkedin.com/in/renreal-dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IoLogoLinkedin />
-                </i>
-                <i>
+                </a>
+                <a
+                  href="https://github.com/Renreal"
+                  target="blank"
+                  rel="noopener noreferrer"
+                >
                   <IoLogoGithub />
-                </i>
-                <i>
+                </a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=renrealmae09@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IoIosMail />
-                </i>
+                </a>
               </div>
               <a
+                className="resume-link"
                 href="https://drive.google.com/file/d/1wA3MZJ4RZvRCmPvTvrDHMYfyrNPq138A/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"

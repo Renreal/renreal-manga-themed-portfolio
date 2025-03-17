@@ -32,16 +32,16 @@ header{
     justify-content: flex-end;
 }
   nav a{
-    border: solid white;
+    /* border: solid white; */
     margin-left: 2rem;
     cursor: pointer;
     font-size: 1.5rem;
     padding: 1rem;
   }
   nav a:hover{
-    border: solid;
-    background-color: #000;
-    color:#F5C524;
+    background-color: #00000017;
+    border-radius: 1rem;
+    /* color:#F5C524; */
   }
 
   .menuContainer img{
