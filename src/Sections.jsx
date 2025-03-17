@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion"; // 👈 Import useInView
-import Certificates from "./certificates.jsx";
+import Certificates from "../sections/certificates.jsx";
 import "./css/Sections.css";
 import profile from "./assets/me.png";
 import profile2 from "./assets/after.jpg";

@@ -1,19 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "./connection/supabaseClient.jsx";
+import { supabase } from "../src/connection/supabaseClient.jsx";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+const CACHE_KEY = "certificatesCache";
+const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 
 const Certificates = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    if (cachedData) {
+      const { data, timestamp } = JSON.parse(cachedData);
+      if (Date.now() - timestamp < CACHE_DURATION) {
+        setImages(data);
+        return;
+      }
+    }
+
     const fetchImages = async () => {
       try {
         const { data, error } = await supabase.storage
           .from("certificates")
           .list("skills");
-
-        console.log("📂 Files in skills folder:", data);
 
         if (error) {
           console.error("❌ Error listing files:", error);
@@ -28,6 +38,10 @@ const Certificates = () => {
         );
 
         setImages(urls);
+        localStorage.setItem(
+          CACHE_KEY,
+          JSON.stringify({ data: urls, timestamp: Date.now() })
+        );
       } catch (err) {
         console.error("❌ Unexpected error:", err);
       }

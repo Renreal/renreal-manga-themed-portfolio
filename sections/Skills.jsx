@@ -1,20 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../src/connection/supabaseClient.jsx";
 
+const CACHE_KEY = "skillsCache";
+const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
 const fetchSkillsIcon = () => {
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    if (cachedData) {
+      const { data, timestamp } = JSON.parse(cachedData);
+      if (Date.now() - timestamp < CACHE_DURATION) {
+        setSkills(data);
+        setLoading(false);
+        return;
+      }
+    }
+
     const fetchSkills = async () => {
       try {
         const { data, error } = await supabase
           .from("tech-stack-icons")
-          .select("*"); // Fetch all columns for flexibility
+          .select("*");
 
         if (error) throw error;
 
         setSkills(data);
+        localStorage.setItem(
+          CACHE_KEY,
+          JSON.stringify({ data, timestamp: Date.now() })
+        );
       } catch (error) {
         console.error("Error fetching skills:", error.message);
       } finally {
@@ -29,8 +46,7 @@ const fetchSkillsIcon = () => {
 
   return (
     <div className="skillsContainer">
-      <p>Im capable of using the following</p>
-
+      <p>I'm capable of using the following:</p>
       <div className="skillsIcon">
         {skills.length > 0 ? (
           skills.map((skill) => (
