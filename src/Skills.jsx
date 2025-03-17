@@ -29,9 +29,7 @@ const fetchSkillsIcon = () => {
 
   return (
     <div className="skillsContainer">
-
       <p>Im capable of using the following</p>
-       
 
       <div className="skillsIcon">
         {skills.length > 0 ? (

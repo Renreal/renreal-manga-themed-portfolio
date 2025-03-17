@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
-import Header from './Header.jsx';
-import Sections from './Sections.jsx';
-
+import React, { useRef } from "react";
+import Header from "./Header.jsx";
+import Sections from "./Sections.jsx";
 
 function App() {
   const aboutRef = useRef(null);
@@ -12,16 +11,25 @@ function App() {
   const scrollToRef = (ref) => {
     window.scrollTo({
       top: ref.current.offsetTop,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
   return (
     <div className="container">
-
-      <Header scrollToRef={scrollToRef} aboutRef={aboutRef} contactRef={contactRef} skillsRef={skillsRef} projectsRef={projectsRef} />
-      <Sections aboutRef={aboutRef} contactRef={contactRef} skillsRef={skillsRef} projectsRef={projectsRef} />
+      <Header
+        scrollToRef={scrollToRef}
+        aboutRef={aboutRef}
+        contactRef={contactRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+      />
+      <Sections
+        aboutRef={aboutRef}
+        contactRef={contactRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+      />
     </div>
-
   );
 }
 
