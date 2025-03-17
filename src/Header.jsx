@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './css/Header.css';
-import icon from './assets/icon.png';
-import menu from './assets/menu.svg';
+import React, { useState, useEffect, useRef } from "react";
+import "./css/Header.css";
+import icon from "./assets/icon.png";
+import menu from "./assets/menu.svg";
 
 function Header({ scrollToRef, aboutRef, contactRef, skillsRef, projectsRef }) {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -20,10 +20,10 @@ function Header({ scrollToRef, aboutRef, contactRef, skillsRef, projectsRef }) {
       }
     };
 
-    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener("click", handleOutsideClick);
 
     return () => {
-      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
 
@@ -34,7 +34,7 @@ function Header({ scrollToRef, aboutRef, contactRef, skillsRef, projectsRef }) {
   return (
     <header>
       <div className="content">
-        <div className='logoSection'>
+        <div className="logoSection">
           <img src={icon} alt="nebereus icon" />
           <p>RENREAL</p>
         </div>
@@ -44,12 +44,19 @@ function Header({ scrollToRef, aboutRef, contactRef, skillsRef, projectsRef }) {
           <a onClick={() => scrollToRef(projectsRef)}>Projects</a>
           <a onClick={() => scrollToRef(contactRef)}>Contact</a>
         </nav>
-        <div className='menuContainer' onClick={toggleSidebar} ref={menuContainerRef}>
+        <div
+          className="menuContainer"
+          onClick={toggleSidebar}
+          ref={menuContainerRef}
+        >
           <img src={menu} alt="menu-icon" />
         </div>
       </div>
 
-      <nav ref={sidebarRef} className={`sidebar ${sidebarVisible ? 'active' : ''}`}>
+      <nav
+        ref={sidebarRef}
+        className={`sidebar ${sidebarVisible ? "active" : ""}`}
+      >
         <a onClick={() => scrollToRef(aboutRef)}>About</a>
         <a onClick={() => scrollToRef(skillsRef)}>Skills</a>
         <a onClick={() => scrollToRef(projectsRef)}>Projects</a>

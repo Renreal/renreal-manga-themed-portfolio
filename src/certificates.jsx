@@ -9,8 +9,7 @@ const Certificates = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const { data, error } = await supabase
-          .storage
+        const { data, error } = await supabase.storage
           .from("certificates")
           .list("skills");
 
@@ -23,8 +22,9 @@ const Certificates = () => {
 
         const urls = data.map(
           (file) =>
-            supabase.storage.from("certificates").getPublicUrl(`skills/${file.name}`)
-              .data.publicUrl
+            supabase.storage
+              .from("certificates")
+              .getPublicUrl(`skills/${file.name}`).data.publicUrl
         );
 
         setImages(urls);
@@ -45,9 +45,9 @@ const Certificates = () => {
   return (
     <div className="certificatesContainer">
       {images.length > 0 ? (
-        <Carousel 
-          responsive={responsive} 
-          infinite 
+        <Carousel
+          responsive={responsive}
+          infinite
           autoPlay
           autoPlaySpeed={2000}
           arrows
