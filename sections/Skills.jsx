@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "./connection/supabaseClient.jsx";
+import { supabase } from "../src/connection/supabaseClient.jsx";
 
 const fetchSkillsIcon = () => {
   const [skills, setSkills] = useState([]);
