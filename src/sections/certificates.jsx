@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "../src/connection/supabaseClient.jsx";
+import { supabase } from "../connection/supabaseClient.jsx";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const CACHE_KEY = "certificatesCache";
-const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
+
 
 const Certificates = () => {
   const [images, setImages] = useState([]);
