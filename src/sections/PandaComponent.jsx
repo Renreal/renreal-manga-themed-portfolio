@@ -8,8 +8,8 @@ const PandaComponent = () => {
   return (
     <Canvas
     camera={{
-      position: [0, 0, -5], 
-      fov: 25, 
+      position: [0, 0, -5], //backward view 
+      fov: 25, //field view
       near: 0.1, 
       far: 10000, 
     }}
@@ -19,10 +19,10 @@ const PandaComponent = () => {
 
       <Suspense fallback={null}>
         <OrbitControls
-          enableZoom={true} // Keep zoom enabled
-          dampingFactor={0.05} // Smooth controls
+          enableZoom={true} 
+          dampingFactor={0.05} 
           rotateSpeed={0.5} 
-          autoRotate={true} // Auto-rotates the camera
+          autoRotate={true}
           autoRotateSpeed={1} 
         />
         <Panda />

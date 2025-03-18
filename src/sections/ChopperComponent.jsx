@@ -2,14 +2,14 @@ import React from "react";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Chopper from "../react-fiber/Chopper.jsx";
+
 
 const ThreeDComponent = () => {
   return (
     <Canvas
       camera={{
-        position: [0, 10, 5], // Move the camera further back
-        fov: 70, // More natural perspective
+        position: [0, 10, 5], 
+        fov: 70, 
         near: 0.1, 
         far: 100, 
       }}
@@ -19,12 +19,11 @@ const ThreeDComponent = () => {
 
       <Suspense fallback={null}>
         <OrbitControls
-          enableZoom={true} // Keep zoom enabled
-          target={[0, 1, 0]} // Focus on Chopper's head
-          dampingFactor={0.05} // Smooth controls
+          enableZoom={true} 
+          target={[0, 1, 0]} 
+          dampingFactor={0.05} 
           rotateSpeed={0.5} 
         />
-        <Chopper />
       </Suspense>
     </Canvas>
   );

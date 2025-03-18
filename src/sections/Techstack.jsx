@@ -3,7 +3,6 @@ import { FaReact,FaCss3,FaHtml5,FaBootstrap,FaDocker} from "react-icons/fa";
 import { RiSupabaseLine, RiFirebaseLine } from "react-icons/ri";
 import { GoDatabase } from "react-icons/go";
 import { SiKubernetes, SiGithubactions, SiArgo, SiPostman, SiRancher } from "react-icons/si"
-import ThreeDComponent from "./ChopperComponent.jsx";
 import PandaComponent from "./PandaComponent.jsx";
 const FetchSkillsIcon = () => {
   return (
