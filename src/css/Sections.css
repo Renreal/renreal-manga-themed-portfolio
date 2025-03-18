@@ -126,12 +126,10 @@ section {
   background-color: rgb(95, 90, 90);
 }
 .skillsContainer {
-  display: flex;
   width: 100%; /* Use standard width */
   text-align: center;
   color: black;
   padding: 3rem;
-  justify-content: space-between;
   /* height: 20vh; */
 }
 
@@ -140,9 +138,9 @@ section {
 } */
 .right-container{
   background: black;
-  width: 50%;
+  /* width: 5/0%; */
   color: white;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 .canvas-wrapper {
   position: absolute;
@@ -171,12 +169,7 @@ section {
 
 
 /* Responsive styles */
-@media screen and (max-width: 550px) {  
-  .skillsContainer {
-    flex-direction: column; /* Stack items on smaller screens */
-    align-items: center;
-  }
-}
+
 
 
 
