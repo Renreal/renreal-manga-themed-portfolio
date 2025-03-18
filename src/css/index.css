@@ -14,6 +14,13 @@ body {
 
 
 @media(max-width:756px){
+  :root{
+    overflow: auto;
+  }
+  ::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit browsers */
+  }  
+  
   /* .container{
     margin: 0 auto;
   } */

@@ -4,11 +4,12 @@ import { RiSupabaseLine, RiFirebaseLine } from "react-icons/ri";
 import { GoDatabase } from "react-icons/go";
 import { SiKubernetes, SiGithubactions, SiArgo, SiPostman, SiRancher } from "react-icons/si"
 import PandaComponent from "./PandaComponent.jsx";
+import CatComponent from "./CatComponent.jsx";
 const FetchSkillsIcon = () => {
   return (
     <div className="skillsContainer">
       <div className="left-container">
-      <PandaComponent/>
+      <CatComponent/>
 
       </div>
       <div className="right-container">
