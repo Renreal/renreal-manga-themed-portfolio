@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import Header from "./Header.jsx";
 import Sections from "./Sections.jsx";
 
+
+
 function App() {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
@@ -15,6 +17,7 @@ function App() {
     });
   };
   return (
+   
     <div className="container">
       <Header
         scrollToRef={scrollToRef}

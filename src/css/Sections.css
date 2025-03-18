@@ -126,13 +126,24 @@ section {
 }
 .skillsContainer {
   display: flex;
-  width: -webkit-fill-available;
-  background-color: black;
+  width: 100%; /* Use standard width */
   text-align: center;
-  color: #fff;
+  color: black;
   padding: 3rem;
   justify-content: space-around;
+  height: 20vh;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 550px) {  
+  .skillsContainer {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center;
+  }
+}
+
+
+
 .skillsContainer img {
   width: 5rem;
   margin: 0.5rem;
