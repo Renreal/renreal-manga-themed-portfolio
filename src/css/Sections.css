@@ -132,9 +132,11 @@ section {
   background-color: rgb(95, 90, 90);
 }
 .skillsContainer {
-  width: 100%; /* Use standard width */
-  text-align: center;
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .right-container {
@@ -144,6 +146,12 @@ section {
   justify-content: space-evenly;
   flex-direction: column;
   padding: 1rem;
+  width: 50%;
+}
+.r-container-title{
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-bottom:1px solid;
 }
 .right-container-title-icon {
   display: flex;
@@ -157,9 +165,10 @@ section {
   /* top: 100%; */
 }
 .canvas-wrapper::after {
-  content: "Hello! You can minimize \A me if I'm blocking anything";
+  text-transform: none;
+  content: "Hello! You can minimize me if\AI'm blocking anything";
   position: absolute;
-  top: -25px; /* Adjust as needed */
+  top: -55px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
@@ -170,7 +179,7 @@ section {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out;
-  white-space: pre-line;
+  white-space:pre-line;
 }
 
 .canvas-wrapper:hover::after {
@@ -228,17 +237,35 @@ section {
 }
 .tech-container {
   display: flex;
+  flex-wrap: wrap;
+}
+.tech-container a{
+  transition:
+  transform 0.3s ease,
+  color 0.3s ease;
+}
+.tech-container a:hover{
+  transform: scale(1.25);
 }
 .tech-container span {
+  transition:
+  transform 0.3s ease,
+  color 0.3s ease;
   display: flex;
-  width: 7rem;
   background: #e7e7e7bd;
-  margin-left: 1px;
-  font-size: 1em;
+  margin: 1px;
+  padding: 0.5rem;
+  /* width: 10rem; */
+  font-size: 13px;
   border-radius: 54px;
-  align-content: center;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: row-reverse;
+}
+.tech-container span:hover{
+  transform: scale(1.25);
+  background-color: black;
+  color: white;
 }
 
 @media (max-width: 1050px) {
