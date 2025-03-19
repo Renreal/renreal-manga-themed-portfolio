@@ -65,26 +65,26 @@ section {
 
 @media (max-width: 570px) {
   .aboutInnerContainer .resume-link {
-  font-size: 3vw;
+    font-size: 3vw;
   }
 }
 
-
-
 .aboutInnerContainer span {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  flex-direction: column;
+  align-items: center ;
+  flex-direction: column-reverse;
 }
-.socials{
+.socials {
   z-index: 5;
+  margin-top: 0.5rem;
 }
 .socials a {
   color: blue;
   font-size: 2rem;
   display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .socials a:hover {
@@ -137,24 +137,24 @@ section {
   color: black;
 }
 
-.right-container{
-  background: black;
-  color: white;
+.right-container {
+  background: white;
+  color: black;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   padding: 1rem;
 }
-.right-container-title-icon{
+.right-container-title-icon {
   display: flex;
-    align-items: center;
-    justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
 .canvas-wrapper {
   position: absolute;
   left: 0;
   z-index: 2;
-  top: 100%;
+  /* top: 100%; */
 }
 .canvas-wrapper::after {
   content: "Hello! You can minimize \A me if I'm blocking anything";
@@ -178,11 +178,7 @@ section {
   visibility: visible;
 }
 
-
 /* Responsive styles */
-
-
-
 
 .skillsContainer img {
   width: 5rem;
@@ -201,7 +197,7 @@ section {
 }
 .certificatesContainer img {
   width: 100%;
-  max-width: 50vw;
+  /* max-width: 50vw; */
   height: auto;
   object-fit: contain;
 }
@@ -230,18 +226,20 @@ section {
 .titleContainer {
   display: inline-grid;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+.tech-container {
+  display: flex;
+}
+.tech-container span {
+  display: flex;
+  width: 7rem;
+  background: #e7e7e7bd;
+  margin-left: 1px;
+  font-size: 1em;
+  border-radius: 54px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 @media (max-width: 1050px) {
   .about-section {
