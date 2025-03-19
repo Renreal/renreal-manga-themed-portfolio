@@ -8,7 +8,7 @@ import profile2 from "./assets/after.jpg";
 import TechStack from "./sections/Techstack.jsx";
 import { IoLogoLinkedin, IoLogoGithub, IoIosMail } from "react-icons/io";
 import { FaGoogleDrive } from "react-icons/fa";
-
+import CatComponent from "./sections/CatComponent.jsx";
 function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const [isHovered, setIsHovered] = useState(false);
   const [selectedNav, setSelectedNav] = useState("viewTools");
@@ -81,6 +81,9 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         </motion.div>
       </motion.section>
 
+      <div className="left-container">
+      <CatComponent/>
+      </div>
       {/* Skills Section */}
       <motion.section
         ref={skillsRef}
@@ -91,7 +94,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
       >
         <Certificates />
       </motion.section>
-
+      
       <TechStack />
 
       {/* Projects Section */}

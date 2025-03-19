@@ -7,13 +7,14 @@ import PandaComponent from "./PandaComponent.jsx";
 import CatComponent from "./CatComponent.jsx";
 const FetchSkillsIcon = () => {
   return (
+    
     <div className="skillsContainer">
-      <div className="left-container">
-      <CatComponent/>
-
-      </div>
+      
       <div className="right-container">
-      Tools and technologies I'm familiar with (but not limited to)
+      <span>Tools and technologies I'm familiar with (but not limited to)
+      </span>
+      <div className="right-container-title-icon">
+      <p>Databases and API Connectivity Testing</p>
         <div>
           <FaReact />
           <FaHtml5 />
@@ -29,6 +30,8 @@ const FetchSkillsIcon = () => {
           <SiPostman />
           <SiRancher />
         </div>
+       </div>
+
       </div>
     </div>
   );
