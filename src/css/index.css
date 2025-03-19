@@ -1,8 +1,8 @@
 :root {
-  font-family: "Comic Neue";
+  font-family: "monospace";
   color: #000;
   background-color: #F2F3F8;
-  font-style: normal;
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   margin: 0 auto;

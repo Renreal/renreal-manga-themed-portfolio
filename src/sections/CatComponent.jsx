@@ -20,7 +20,7 @@ const CatComponent = () => {
       <Suspense fallback={null}>
         <OrbitControls
           enableZoom={true}
-          minDistance={88}
+          minDistance={100}
           maxDistance={300}
           dampingFactor={0.05}
           rotateSpeed={0.5}

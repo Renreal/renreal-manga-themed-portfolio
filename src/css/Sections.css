@@ -65,24 +65,26 @@ section {
 
 @media (max-width: 570px) {
   .aboutInnerContainer .resume-link {
-  font-size: 3vw;
+    font-size: 3vw;
   }
 }
 
-
-
 .aboutInnerContainer span {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  flex-direction: column;
+  align-items: center ;
+  flex-direction: column-reverse;
 }
-
+.socials {
+  z-index: 5;
+  margin-top: 0.5rem;
+}
 .socials a {
   color: blue;
   font-size: 2rem;
   display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .socials a:hover {
@@ -104,6 +106,7 @@ section {
   flex-direction: column;
   padding-top: 1.9rem;
   width: -webkit-fill-available;
+  z-index: 1;
 }
 .skillsNav {
   display: flex;
@@ -129,29 +132,43 @@ section {
   background-color: rgb(95, 90, 90);
 }
 .skillsContainer {
-  width: 100%; /* Use standard width */
-  text-align: center;
   color: black;
-  padding: 3rem;
-  /* height: 20vh; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* .left-container{
-  border: 2px solid;
-} */
-.right-container{
-  background: black;
-  /* width: 5/0%; */
-  color: white;
-  /* margin-right: 1rem; */
+.right-container {
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 1rem;
+  width: 50%;
+}
+.r-container-title{
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-bottom:1px solid;
+}
+.right-container-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .canvas-wrapper {
   position: absolute;
+  left: 0;
+  z-index: 2;
+  /* top: 100%; */
 }
 .canvas-wrapper::after {
-  content: "Hello! You can minimize \A me if I'm blocking anything";
+  text-transform: none;
+  content: "Hello! You can minimize me if\AI'm blocking anything";
   position: absolute;
-  top: -25px; /* Adjust as needed */
+  top: -55px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
@@ -162,7 +179,7 @@ section {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out;
-  white-space: pre-line;
+  white-space:pre-line;
 }
 
 .canvas-wrapper:hover::after {
@@ -170,11 +187,7 @@ section {
   visibility: visible;
 }
 
-
 /* Responsive styles */
-
-
-
 
 .skillsContainer img {
   width: 5rem;
@@ -193,7 +206,7 @@ section {
 }
 .certificatesContainer img {
   width: 100%;
-  max-width: 50vw;
+  /* max-width: 50vw; */
   height: auto;
   object-fit: contain;
 }
@@ -222,18 +235,38 @@ section {
 .titleContainer {
   display: inline-grid;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tech-container a{
+  transition:
+  transform 0.3s ease,
+  color 0.3s ease;
+}
+.tech-container a:hover{
+  transform: scale(1.25);
+}
+.tech-container span {
+  transition:
+  transform 0.3s ease,
+  color 0.3s ease;
+  display: flex;
+  background: #e7e7e7bd;
+  margin: 1px;
+  padding: 0.5rem;
+  /* width: 10rem; */
+  font-size: 13px;
+  border-radius: 54px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+}
+.tech-container span:hover{
+  transform: scale(1.25);
+  background-color: black;
+  color: white;
+}
 
 @media (max-width: 1050px) {
   .about-section {
@@ -250,8 +283,8 @@ section {
     width: 50vw;
   }
 }
-@media (max-width: 500px) {
-  .about-section {
-    padding: 1rem;
+@media (max-width: 400px) {
+  .aboutInnerContainer {
+    width: 15rem;
   }
 }
