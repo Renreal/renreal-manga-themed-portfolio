@@ -134,9 +134,8 @@ section {
 .skillsContainer {
   color: black;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .right-container {
@@ -146,7 +145,7 @@ section {
   justify-content: space-evenly;
   flex-direction: column;
   padding: 1rem;
-  width: 50%;
+  
 }
 .r-container-title{
   font-weight: bold;
@@ -166,7 +165,7 @@ section {
 }
 .canvas-wrapper::after {
   text-transform: none;
-  content: "Hello! You can minimize me if\AI'm blocking anything";
+  content: "Hello! You can minimize me if I'm blocking anything";
   position: absolute;
   top: -55px; /* Adjust as needed */
   left: 50%;
@@ -287,4 +286,19 @@ section {
   .aboutInnerContainer {
     width: 15rem;
   }
+}
+
+/* l-container - workexp start */
+.l-container{
+  background-color: white;
+  padding: 5px;
+  border-radius: 0.5rem;
+  border: 1px solid #312d2d30;
+}
+.work-section-header{
+  display: flex;
+  font-weight: bold;
+}
+.work-section-header svg{
+margin-right: 5px;
 }

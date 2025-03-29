@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion"; // 👈 Import useInView
+import { useInView } from "framer-motion";
 import Certificates from "./sections/certificates.jsx";
 import "./css/Sections.css";
 import profile from "./assets/me.png";
@@ -9,6 +9,7 @@ import TechStack from "./sections/Techstack.jsx";
 import { IoLogoLinkedin, IoLogoGithub, IoIosMail } from "react-icons/io";
 import { FaGoogleDrive } from "react-icons/fa";
 import CatComponent from "./sections/CatComponent.jsx";
+import PandaComponent from "./sections/PandaComponent.jsx";
 function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
   const [isHovered, setIsHovered] = useState(false);
   const [selectedNav, setSelectedNav] = useState("viewTools");
@@ -84,6 +85,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
       <div className="left-container">
       <CatComponent/>
       </div>
+      
       {/* Skills Section */}
       <motion.section
         ref={skillsRef}
@@ -108,7 +110,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         <h2>Projects</h2>
         <p>This is the projects section.</p>
       </motion.section>
-
+     
       {/* Contact Section */}
       <motion.section
         ref={contactRef}
