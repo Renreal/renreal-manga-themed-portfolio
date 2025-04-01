@@ -20,10 +20,11 @@ import {
   SiJavascript,
 } from "react-icons/si";
 import PandaComponent from "./PandaComponent.jsx";
-import CatComponent from "./CatComponent.jsx";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 import Workexp from "./Workexp.jsx";
+
+const CACHE_KEY = "skillsCache";
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
 const FetchSkillsIcon = () => {
   return (
     <div className="skillsContainer">
@@ -84,7 +85,7 @@ const FetchSkillsIcon = () => {
               <span>
                 Rancher
                 <a>
-                  <SiRancher />
+                  <SiRancher  className="blue"/>
                 </a>
               </span>
               <span>

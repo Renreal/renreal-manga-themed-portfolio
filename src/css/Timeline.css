@@ -1,16 +1,16 @@
+.work-section-header {
+  margin-left: 1rem;
+}
 .timeline {
   position: relative;
   margin-left: 40px; /* give more spacing */
   border-left: 2px solid #ccc;
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  gap: 10px; /* space between bullet and text */
+  padding: 1rem;
 }
 
 .timeline-item .bullet {
@@ -22,16 +22,25 @@
   border: 2px solid #000;
   flex-shrink: 0;
   left: -32px;
-}
-
-.bullet.filled {
-  background-color: #000;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.bullet.filled p{
+
+.bullet.filled {
+  background-color: #000;
+}
+.bullet .w-container {
   width: max-content;
   position: absolute;
   margin-left: 2rem;
+}
+.w-time {
+  display: flex;
+  justify-content: flex-end;
+}
+.w-time-description p{
+    text-transform: capitalize;
+    margin-right: 1rem;
+    text-align: left;
 }

@@ -41,8 +41,6 @@ header{
     text-transform: uppercase;
   }
   nav a:hover {
-    background-color: #8d858517;
-    border-radius: 1rem;
     transform: scale(1.1); 
     transition: transform 0.2s ease-in-out;
   }

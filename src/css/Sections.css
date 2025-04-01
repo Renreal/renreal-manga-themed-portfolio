@@ -33,6 +33,9 @@ section {
   border: 4px solid;
   filter: grayscale(100%);
 }
+.about-section img:hover{
+  filter: none;
+}
 
 .aboutTextOuterContainer {
   background-color: #fff;
@@ -309,4 +312,9 @@ section {
 }
 .work-section-header svg{
 margin-right: 5px;
+}
+
+/* tech-stack icons */
+.blue{
+  color: blue;
 }
