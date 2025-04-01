@@ -6,11 +6,11 @@
   margin-left: 40px; /* give more spacing */
   border-left: 2px solid #ccc;
   padding-left: 22px;
+  margin-bottom: 1rem;
 }
 
 .timeline-item {
   position: relative;
-  padding: 1rem;
 }
 
 .timeline-item .bullet {
@@ -35,12 +35,29 @@
   position: absolute;
   margin-left: 2rem;
 }
-.w-time {
-  display: flex;
-  justify-content: flex-end;
+.w-Exp-description{
+  padding: 1px;
 }
-.w-time-description p{
-    text-transform: capitalize;
+.w-Exp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+  margin-bottom: -1rem;
+  align-items: center;
+}
+.w-Exp-description p{
+    text-transform: none;
     margin-right: 1rem;
-    text-align: left;
+    text-align: justify;
+}
+.w-work{
+  font-weight: bold;
+}
+.w-time{
+  background: #e7e7e7bd;
+  padding: 5px;
+  border-radius: 10px;
+}
+.w-company{
+  font-style: italic;
 }

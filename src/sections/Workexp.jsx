@@ -65,16 +65,16 @@ const WorkExp = () => {
             <div className="timeline-item" key={work.id}>
               <div className={`bullet ${index === 0 ? "filled" : ""}`}>
                 <div className="w-container">
-                  <p>{work.work}</p>
+                  <p className="w-work">{work.work}</p>
                 </div>
               </div>
-              
-              <div className="w-time-description">
-                <div className="w-time">
-                 <p>{work.time}
-                  </p>
+
+              <div className="w-Exp-description">
+                <div className="w-Exp">
+                  <p className="w-company">{work.company}</p>
+                  <p className="w-time">{work.time}</p>
                 </div>
-                
+
                 <p>{work.wText}</p>
               </div>
             </div>
