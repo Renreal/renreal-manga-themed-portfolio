@@ -1,16 +1,16 @@
+.work-section-header {
+  margin-left: 1rem;
+}
 .timeline {
   position: relative;
   margin-left: 40px; /* give more spacing */
   border-left: 2px solid #ccc;
-  padding-left: 20px;
+  padding-left: 22px;
+  margin-bottom: 1rem;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  gap: 10px; /* space between bullet and text */
 }
 
 .timeline-item .bullet {
@@ -22,16 +22,42 @@
   border: 2px solid #000;
   flex-shrink: 0;
   left: -32px;
-}
-
-.bullet.filled {
-  background-color: #000;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.bullet.filled p{
+
+.bullet.filled {
+  background-color: #000;
+}
+.bullet .w-container {
   width: max-content;
   position: absolute;
   margin-left: 2rem;
+}
+.w-Exp-description{
+  padding: 1px;
+}
+.w-Exp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+  margin-bottom: -1rem;
+  align-items: center;
+}
+.w-Exp-description p{
+    text-transform: none;
+    margin-right: 1rem;
+    text-align: justify;
+}
+.w-work{
+  font-weight: bold;
+}
+.w-time{
+  background: #e7e7e7bd;
+  padding: 5px;
+  border-radius: 10px;
+}
+.w-company{
+  font-style: italic;
 }

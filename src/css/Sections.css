@@ -7,7 +7,7 @@
 }
 @media (min-width: 756px) {
   .wrapper {
-    margin: 0 5rem;
+    margin: 0 3.5rem;
   }
 }
 
@@ -32,6 +32,9 @@ section {
   width: 25vw;
   border: 4px solid;
   filter: grayscale(100%);
+}
+.about-section img:hover{
+  filter: none;
 }
 
 .aboutTextOuterContainer {
@@ -145,6 +148,10 @@ section {
   justify-content: space-evenly;
   flex-direction: column;
   padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #312d2d30;
+  width: 100%;
+  margin-left: 1rem;
   
 }
 .r-container-title{
@@ -281,6 +288,9 @@ section {
   .about-section img {
     width: 50vw;
   }
+  .about-section{
+    padding: 2rem;
+  }
 }
 @media (max-width: 400px) {
   .aboutInnerContainer {
@@ -294,6 +304,7 @@ section {
   padding: 5px;
   border-radius: 0.5rem;
   border: 1px solid #312d2d30;
+  width: 100%;
 }
 .work-section-header{
   display: flex;
@@ -301,4 +312,9 @@ section {
 }
 .work-section-header svg{
 margin-right: 5px;
+}
+
+/* tech-stack icons */
+.blue{
+  color: blue;
 }

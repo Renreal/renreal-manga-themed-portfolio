@@ -1,14 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../connection/supabaseClient";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 import "../css/Timeline.css";
 
-const workexp = () => {
-  const items = [
-    "Started Project",
-    "Built Features",
-    "Handled Feedback",
-    "Went Live",
-  ];
+const CACHE_KEY = "workExpCache";
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+const WorkExp = () => {
+  const [works, setWorks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const loadWorks = async () => {
+      try {
+        // Check localStorage cache
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        if (cachedData) {
+          const { data, timestamp } = JSON.parse(cachedData);
+          if (Date.now() - timestamp < CACHE_DURATION) {
+            setWorks(data);
+            setLoading(false);
+            return;
+          }
+        }
+
+        // Fetch data from Supabase
+        const { data, error } = await supabase
+          .from("work-experience")
+          .select("*");
+
+        if (error) throw error;
+
+        // Update state and cache
+        setWorks(data);
+        localStorage.setItem(
+          CACHE_KEY,
+          JSON.stringify({ data, timestamp: Date.now() })
+        );
+      } catch (err) {
+        setError(err.message);
+        console.error("Error fetching works:", err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadWorks();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="l-container">
@@ -18,28 +60,31 @@ const workexp = () => {
       </p>
 
       <div className="timeline">
-        <div className="timeline-item">
-          <div className="bullet filled"><p>DevOps Engineer </p> </div>
-          {/* <div>description</div> */}
-        </div>
+        {works.length > 0 ? (
+          works.map((work, index) => (
+            <div className="timeline-item" key={work.id}>
+              <div className={`bullet ${index === 0 ? "filled" : ""}`}>
+                <div className="w-container">
+                  <p className="w-work">{work.work}</p>
+                </div>
+              </div>
 
+              <div className="w-Exp-description">
+                <div className="w-Exp">
+                  <p className="w-company">{work.company}</p>
+                  <p className="w-time">{work.time}</p>
+                </div>
 
-
-        <div className="timeline-item">
-          <div className="bullet"></div>
-          <p>BUILT FEATURES</p>
-        </div>
-        <div className="timeline-item">
-          <div className="bullet"></div>
-          <p>HANDLED FEEDBACK</p>
-        </div>
-        <div className="timeline-item">
-          <div className="bullet"></div>
-          <p>WENT LIVE</p>
-        </div>
+                <p>{work.wText}</p>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>No works found in DB</p>
+        )}
       </div>
     </div>
   );
 };
 
-export default workexp;
+export default WorkExp;
