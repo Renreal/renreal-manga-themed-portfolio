@@ -29,10 +29,13 @@ section {
   margin-top: 6rem;
 }
 .about-section img {
-  width: 25vw;
-  border: 4px solid;
-  filter: grayscale(100%);
-}
+  
+    width: 25vw;
+    border: 4px solid;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out; /* Optional: smooth hover effect */
+  }
+  
 .about-section img:hover{
   filter: none;
 }

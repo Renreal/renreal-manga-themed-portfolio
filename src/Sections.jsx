@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import Certificates from "./sections/certificates.jsx";
 import "./css/Sections.css";
-import profile from "./assets/me.png";
-import profile2 from "./assets/after.jpg";
+import profile from "./assets/profiles/side.jpg";
+import profile2 from "./assets/profiles/side-animated.png";
 import TechStack from "./sections/Techstack.jsx";
 import { IoLogoLinkedin, IoLogoGithub, IoIosMail } from "react-icons/io";
 import { FaGoogleDrive } from "react-icons/fa";
@@ -28,7 +28,9 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         animate={aboutInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
-        <div className="imageContainer">
+        <div className="imageContainer"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}>
           <img src={isHovered ? profile2 : profile} alt="anime pic" />
         </div>
 
