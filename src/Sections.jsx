@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import Certificates from "./sections/certificates.jsx";
 import "./css/Sections.css";
-import profile from "./assets/profiles/side.jpg";
-import profile2 from "./assets/profiles/side-animated.png";
+import profile from "./assets/profiles/side-animated.png";
+import profile2 from "./assets/profiles/side-1.png";
 import TechStack from "./sections/Techstack.jsx";
 import { IoLogoLinkedin, IoLogoGithub, IoIosMail } from "react-icons/io";
 import { FaGoogleDrive } from "react-icons/fa";
@@ -28,9 +28,11 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         animate={aboutInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
-        <div className="imageContainer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}>
+        <div
+          className="imageContainer"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <img src={isHovered ? profile2 : profile} alt="anime pic" />
         </div>
 
@@ -42,10 +44,13 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         >
           <div className="aboutInnerContainer">
             <p>
-              Hello! I'm Renreal. I have a background in DevOps and a degree in
-              computer engineering. I enjoy building and automating software
-              solutions, and I'm continuously learning. Whether it’s a job
-              opportunity or you just want to say hi, my inbox is always open!
+              Hello, I’m Renreal! Computer Engineer | DevOps Engineer | Full
+              Stack Web Developer (React-focused Enthusiast). I love building
+              systems that solve real-world, day-to-day problems. I specialize
+              in creating automation solutions. Right now, I’m working on expanding my network. If you
+             , or someone you know, would like to connect, my inbox is always
+              open! Whether it’s about a project opportunity or simply to say
+              hi, feel free to reach out. Let’s connect!
             </p>
             <span>
               <div className="socials">
@@ -85,9 +90,9 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
       </motion.section>
 
       <div className="left-container">
-      <CatComponent/>
+        <CatComponent />
       </div>
-      
+
       {/* Skills Section */}
       <motion.section
         ref={skillsRef}
@@ -98,7 +103,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
       >
         <Certificates />
       </motion.section>
-      
+
       <TechStack />
 
       {/* Projects Section */}
@@ -112,7 +117,7 @@ function Sections({ aboutRef, contactRef, skillsRef, projectsRef }) {
         <h2>Projects</h2>
         <p>This is the projects section.</p>
       </motion.section>
-     
+
       {/* Contact Section */}
       <motion.section
         ref={contactRef}

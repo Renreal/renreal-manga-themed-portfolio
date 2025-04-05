@@ -16,29 +16,40 @@ section {
   align-items: center;
   justify-content: center;
 }
+
 .about-section {
+  position: relative;
   display: flex;
-  border: 1px solid;
   justify-content: center;
+  align-items: center;
   padding: 4rem;
+  margin-top: 6rem;
+  border: 1px solid;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(/src/assets/bg-1.png);
   background-size: cover;
   background-position: center;
-  background-color: #fff;
-  align-items: center;
-  margin-top: 6rem;
+  opacity: 0.4; 
+  z-index: -1;
 }
+
 .about-section img {
-  
-    width: 25vw;
-    border: 4px solid;
-    filter: grayscale(100%);
-    transition: all 0.3s ease-in-out; /* Optional: smooth hover effect */
-  }
-  
-.about-section img:hover{
-  filter: none;
+  width: 25vw;
+  object-fit: cover;
+  border: 4px solid;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
+
 
 .aboutTextOuterContainer {
   background-color: #fff;
@@ -66,7 +77,9 @@ section {
   text-transform: uppercase;
 }
 .aboutInnerContainer .resume-link:hover {
-  background-color: rgba(0, 0, 0, 0.664);
+  background-color: #7d5f2894;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 @media (max-width: 570px) {
@@ -85,7 +98,7 @@ section {
   margin-top: 0.5rem;
 }
 .socials a {
-  color: blue;
+  color:black;
   font-size: 2rem;
   display: inline-block;
   transition:
@@ -94,7 +107,7 @@ section {
 }
 
 .socials a:hover {
-  color: black;
+  color:  #7d5f28;
   transform: scale(1.25);
 }
 
